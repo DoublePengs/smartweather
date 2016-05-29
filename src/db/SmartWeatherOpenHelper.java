@@ -16,11 +16,11 @@ public class SmartWeatherOpenHelper extends SQLiteOpenHelper {
 	/*   ☆☆☆   定义三个字符串常量 用来表示创建表结构的语句   ☆☆☆   */
 
 	// 创建省份 Province 表的语句
-	public static final String CREATE_PROVINCE = "create table Province(_id integer primary key autoincrement,province_name text,province_code text)";
+	public static final String CREATE_PROVINCE = "create table Province(id integer primary key autoincrement,province_name text,province_code text)";
 	// 创建城市 City 表的语句
-	public static final String CREATE_CITY = "create table City(_id integer primary key autoincrement,city_name text,city_code text,province_id integer)";
+	public static final String CREATE_CITY = "create table City(id integer primary key autoincrement,city_name text,city_code text,province_id integer)";
 	// 创建县 County 表的语句
-	public static final String CREATE_COUNTY = "create table County(_id integer primary key autoincrement,county_name text,county_code text,,city_id integer)";
+	public static final String CREATE_COUNTY = "create table County(id integer primary key autoincrement,county_name text,county_code text,city_id integer)";
 
 	// 数据库创建时  初始化省、市、县的三张表结构
 	@Override
